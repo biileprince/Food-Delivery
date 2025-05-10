@@ -1,0 +1,172 @@
+/* PlaceOrder.css */
+:root {
+  --primary-color: #ff6b6b;
+  --text-dark: #2d3436;
+  --text-light: #ffffff;
+  --border-color: #e0e0e0;
+  --error-color: #ff4444;
+  --transition: all 0.3s ease;
+}
+
+.place-order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.input-group input.error {
+  border-color: var(--error-color);
+}
+
+.error-message {
+  display: block;
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.order-summary {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.payment-methods {
+  margin: 30px 0;
+}
+
+.payment-options {
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.payment-option.active {
+  border-color: var(--primary-color);
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.payment-option:hover {
+  border-color: var(--primary-color);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.security-note {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .place-order {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+}
